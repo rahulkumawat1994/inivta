@@ -50,6 +50,12 @@ main {
     font-size:10rem;
        margin-left:4rem;
 }
+@media (max-width: 800px) and (min-width: 320px) {
+  .box>h1{
+    font-size:4rem;
+       margin-left:4rem;
+}
+}
 
     `}</style>
     </div> </main></Layout>
