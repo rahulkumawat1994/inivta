@@ -1,17 +1,23 @@
 import React, { Component , useRef } from 'react';
 import Router from 'next/router'
-import Layout from '../Components/layout';
-
+import Layout from '../Components/Layot/layout';
+import "./styles.scss";
 
 
    class App extends React.Component {
         render() {
+         console.log( this.props.val)
 return(
-  <Layout>
+
      <main><div className="container-box">
         <div className="box">
 
-        <h1>INIVTA</h1>
+       {this.props.sideBar?<div className="side-bar-hidden"><h1 className="example">A digital firm that create unique products</h1><h3>VIDEO SHARING . HYPERLOCAL</h3></div> :
+       <h1>INIVTA</h1>
+       
+      
+      
+      }
 
         <div >
             
@@ -22,43 +28,8 @@ return(
 
         </div>
        
-<style>{`
-.container-box{
-    width: 100%;
-    // backdrop-filter: blur(50px);
-    // padding: 45px;
-}
-main {
-//   padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-//   justify-content: center;
-  align-items: center;
-}
 
-
-.box{
-    // justify-content: center;
-    // align-items: center;
-    display: flex;
-    color:white;
- 
-    flex-direction: column;
-}
-.box>h1{
-    font-size:10rem;
-       margin-left:4rem;
-}
-@media (max-width: 800px) and (min-width: 320px) {
-  .box>h1{
-    font-size:4rem;
-       margin-left:4rem;
-}
-}
-
-    `}</style>
-    </div> </main></Layout>
+    </div> </main>
 )
 }}
 export default App;

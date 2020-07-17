@@ -2,10 +2,11 @@ import React,{useState} from 'react'
 import Router from 'next/router';
 import {useRouter} from 'next/router';
 import {MdClose} from 'react-icons/md';
-
+import './header.scss'
 const Header=(props)=>{
  
     const router = useRouter()
+    let menuStatus = props.sideBar ? '' : 'isopen';
 return(
     <div className="headerWrapper">
         <div className="header">
@@ -16,9 +17,11 @@ return(
             <div className="navigation-container">
                 
 
-            <div className="name" onClick={()=>Router.push('/')}>{!props.sideBar&&'INIVTA'}</div>
+            <div className="name" onClick={()=>Router.push('/')}>{props.sideBar&&'INIVTA'}</div>
             <div onClick={()=>props.hideSidebar(!props.sideBar)} className="menu-line">
-            {props.sideBar?<><span id='line1'></span ><span id='line2'></span><span id='line3'></span></>:<MdClose /> }</div>
+            {/* {props.sideBar?<><span id='line1'></span ><span id='line2'></span><span id='line3'></span></>:<MdClose /> } */}
+            <div id="hambmenu" className={menuStatus} ><span></span><span></span><span></span><span></span></div>
+            </div>
             {/* <ul className="list">
                 <li className={`home nav-item ${router.pathname==='/'&&'active'}`}   onClick={() =>{SetActive('home');Router.push('/')}}>Home</li>
                 <li className={`contests nav-item ${router.pathname==='/KnowMore'&&'active'}`} onClick={() =>{SetActive('KnowMore'); Router.push('/KnowMore')}}    >Know More</li>
@@ -31,34 +34,7 @@ return(
             </div>
         </div>
 <style>{`
-.headerWrapper{position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 9999;
-}
-.logo-container{
-    margin-right: 20px;
-}
-.menu-line{
-    display: flex;
-    align-items: flex-end;
-    cursor:pointer;
-    flex-direction: column;
-}
-.menu-line>svg{
-    width:30px;
-    height:30px;
-}
-#line1{
-    width:30px;
-}
-#line2{
-    width:25px;
-}
-#line3{
-    width:20px;
-}
+
 #line1, #line2, #line3{
     border-top: 1.5px solid white;
     margin-top:5px;
@@ -82,18 +58,7 @@ return(
     padding: 12px 30px;
     background:${props.settings.background?props.settings.background:''}
 }
-.active{
-    opacity:0.8;    
-}
-.header>svg{
-height: 20px;
-    width: 20px;
-}
-.navigation-container{
-    display:flex;
-    justify-content: space-between;
-    width: 100%;
-}
+
 .name{
     justify-content: center;
     align-items: center;
@@ -102,22 +67,11 @@ height: 20px;
     color:${props.sideBar?'#000 ':'#fff' };
     cursor:pointer
 }
+#hambmenu span{
+    background:${props.sideBar?'#000 ':'#fff' };
+} 
 
-@media (max-width: 790px) and (min-width: 620px) {
-    .nav-item{
-    padding: 18px 10px 18px 10px;
-    }
-}
-@media (max-width: 620px) and (min-width: 480px) {
-    .nav-item{
-    padding: 18px 8px 18px 8px;
-    }
-}
-@media (max-width: 480px) and (min-width: 320px) {
-    .nav-item{
-    padding: 18px 10px 18px 10px;
-    }
-}
+
 
     `}</style>
     </div>

@@ -1,16 +1,16 @@
 
 import React,{useState} from 'react'
-import Head from './head'
-import Header from './Header'
-import Footer from './Footer';
-import SideBar from './SideBar';
-export default ({ children, settings = {} }) => {
+import Head from '../head'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer';
+import SideBar from '../Sidebar/SideBar';
+export default ({ children, settings = {},sideBar,hideSidebar }) => {
 
-  const [sideBar,setSideBar]=useState(false)
+
 return(
     <div >
     <Head />
-    <Header settings={settings} hideSidebar={e=>setSideBar(e)} sideBar={sideBar}/>
+    <Header settings={settings} hideSidebar={e=>hideSidebar(e)} sideBar={sideBar}/>
 
     <div className="container1">
       <SideBar  sideBar={sideBar}/>

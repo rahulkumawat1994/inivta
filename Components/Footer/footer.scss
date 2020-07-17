@@ -1,0 +1,68 @@
+.navigation-container{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.name{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+}
+.blog svg{
+  font-style:'segoeui';
+}
+ul{li:hover{
+  opacity:.8;
+}
+}
+.border{
+  margin-top:1rem;
+  border-top: 0.5px inset;
+  padding-bottom: 1rem;
+}
+ul{li:hover{
+ opacity:.8;
+}
+}
+ul{h6{
+  font-size:1.4rem;}
+}
+@media only screen and (max-width:1200px){
+  .list{
+      width: 80%;
+  }
+  .nav-item{
+  font-size:2.5rem;}
+}
+@media only screen and (max-width:1024px){
+  .list{
+      width: 80%;
+  }
+  .nav-item{
+  font-size:2rem;}
+}
+@media only screen and (max-width:768px){
+  .list{
+      width: 80%;
+  }
+  .nav-item{
+  font-size:1.5rem;}
+}
+@media only screen and (max-width:620px){
+  .list{
+      width: 60%;
+  }
+  .nav-item{
+      font-weight:600;
+  font-size:26px;}
+}
+@media only screen and (max-width:480px){
+  .list{
+      width: 70%;
+  }
+  
+  .nav-item{
+      font-weight:600;
+  font-size:18px;}
+}
