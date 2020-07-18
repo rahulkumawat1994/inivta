@@ -4,7 +4,7 @@ import NextHead from 'next/head'
 const Head = ({ title, description }) => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>Thumbs App</title>
+    <title>INIVTA</title>
     <link rel="icon" href="/favicon.ico" />
     <meta name="description" content={description || ''} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

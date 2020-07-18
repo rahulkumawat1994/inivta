@@ -1,7 +1,7 @@
 $font-size: 42px;
 .example {
     color:pink;
-  font-size: $font-size;
+
   
 }
 .container-box{
@@ -37,14 +37,14 @@ align-items: center;
 margin-top:10rem;
 }
 .side-bar-hidden>h1{
-font-size:3.5rem;
 font-weight:bold;
+font-size:4.5rem;
      margin-left:4rem;
     
 color:black;
 }
 .side-bar-hidden>h3{
-font-size:2rem;
+  font-size:3rem;
 margin-top:3rem;
 font-weight:bold;
 color:lightgray;
@@ -55,4 +55,56 @@ color:lightgray;
   font-size:4rem;
      margin-left:4rem;
 }
+}
+@media only screen and (max-width:1500px){
+.side-bar-hidden{
+  margin-bottom: 2rem;}
+}
+
+@media only screen and (max-width:993px){
+  .side-bar-hidden>h1{
+    font-size:3.5rem
+  }
+  .side-bar-hidden>h3{
+    font-size:2rem
+  }
+  .side-bar-hidden{
+  margin-bottom: 2rem;}
+}
+@media only screen and (max-width:768px){
+  .side-bar-hidden>h1{
+    font-size:3rem
+  }
+  .side-bar-hidden>h3{
+    font-size:1.8rem
+  }
+}
+@media only screen and (max-width:620px){
+  .side-bar-hidden>h1{
+    font-size:3rem;
+  }
+  .side-bar-hidden>h3{
+    font-size:1.8rem;
+    margin-top: 1.8rem;
+  }
+}
+@media only screen and (max-width:480px){
+  .side-bar-hidden>h1{
+    font-size:2rem;
+  }
+  .side-bar-hidden>h3{
+    font-size:1.2rem;
+  }
+  .small-screen{
+    display: none;
+  }
+  
+}
+@media only screen and (max-width:320px){
+  .side-bar-hidden>h1{
+    font-size:1.5rem;
+  }
+  .side-bar-hidden>h3{
+    font-size:1.2rem;
+  }
 }

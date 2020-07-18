@@ -1,6 +1,14 @@
 #layoutSidenav {
   display: flex;
 }
+.nav-link{
+  
+  font-size:4rem;
+  font-weight: 900;
+  font-family:segoeuib;
+  padding: 12px 1px;
+ 
+}
 .layoutSidenav, .layoutSidenav_nav {
   width: 320px;
   height: 100vh;
@@ -31,35 +39,35 @@
 }
 
 @media only screen and (max-width:1200px){
-  #layoutSidenav, #layoutSidenav_nav {
+  .layoutSidenav, .layoutSidenav_nav {
       width: 300px;
   }
   .nav-link{
   font-size:4rem;}
 }
 @media only screen and (max-width:1024px){
-  #layoutSidenav, #layoutSidenav_nav {
+  .layoutSidenav, .layoutSidenav_nav {
       width: 220px;
   }
   .nav-link{
   font-size:3rem;}
 }
 @media only screen and (max-width:768px){
-  #layoutSidenav, #layoutSidenav_nav {
+  .layoutSidenav, .layoutSidenav_nav {
       width: 180px;
   }
   .nav-link{
   font-size:2.5rem;}
 }
 @media only screen and (max-width:620px){
-  #layoutSidenav, #layoutSidenav_nav {
+  .layoutSidenav, .layoutSidenav_nav {
       width: 160px;
   }
   .nav-link{
   font-size:2rem}
 }
 @media only screen and (max-width:480px){
-  #layoutSidenav, #layoutSidenav_nav {
+  .layoutSidenav, .layoutSidenav_nav {
       width: 140px;
   }
   

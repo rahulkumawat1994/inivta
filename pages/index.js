@@ -13,7 +13,7 @@ return(
         <div className="box">
 
        {this.props.sideBar?<div className="side-bar-hidden"><h1 className="example">A digital firm that create unique products</h1><h3>VIDEO SHARING . HYPERLOCAL</h3></div> :
-       <h1>INIVTA</h1>
+       <h1 className="small-screen" style={{marginBottom:this.props.sideBar?'5rem':'2rem'}}>INIVTA</h1>
        
       
       
@@ -29,7 +29,12 @@ return(
         </div>
        
 
-    </div> </main>
+    </div>
+    <style>
+    {`
+
+
+    `}</style> </main>
 )
 }}
 export default App;

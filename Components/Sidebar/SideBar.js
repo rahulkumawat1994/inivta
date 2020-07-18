@@ -44,10 +44,7 @@ const SideBar=(props)=>{
 
       .nav-link{
         color: ${ props.sideBar?'rgb(0, 0, 0) ':'rgb(255, 255, 255)'};
-        font-size:4rem;
-        font-weight: 900;
-        font-family:segoeuib;
-        padding: 12px 1px;
+        
        
       }
      

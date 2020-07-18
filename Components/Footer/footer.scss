@@ -16,6 +16,10 @@ ul{li:hover{
   opacity:.8;
 }
 }
+.instagram{
+  padding-left: 20px !important;
+    margin-top: 6px;
+}
 .border{
   margin-top:1rem;
   border-top: 0.5px inset;
@@ -28,41 +32,51 @@ ul{li:hover{
 ul{h6{
   font-size:1.4rem;}
 }
-@media only screen and (max-width:1200px){
-  .list{
-      width: 80%;
-  }
-  .nav-item{
-  font-size:2.5rem;}
+
+.nav-item{
+  display: flex;
+  align-items: center;
+  padding: 18px 33px 18px 0px;
+  font-weight:900;
+  font-size:43px;
+  cursor: pointer;
+
 }
-@media only screen and (max-width:1024px){
-  .list{
-      width: 80%;
-  }
+@media only screen and (max-width:992px){
   .nav-item{
-  font-size:2rem;}
-}
-@media only screen and (max-width:768px){
-  .list{
-      width: 80%;
+    font-size:35px;
   }
-  .nav-item{
-  font-size:1.5rem;}
+  .list{
+    width: 62%;
+  }
+  .blog{
+    svg{
+      width: 157px;
+    }
+  }
+  .instagram{
+    padding-left: 0px !important;
+      margin-top: 0px;
+  }
 }
 @media only screen and (max-width:620px){
-  .list{
-      width: 60%;
-  }
   .nav-item{
-      font-weight:600;
-  font-size:26px;}
+    font-size:25px;
+  }
+  .list{
+    width:'';
+  }
+  .blog{
+    svg{
+      width: 140px;
+    }
+  }
 }
+
 @media only screen and (max-width:480px){
-  .list{
-      width: 70%;
+  .blog{
+    svg{
+      min-width: 120px;
+    }
   }
-  
-  .nav-item{
-      font-weight:600;
-  font-size:18px;}
 }

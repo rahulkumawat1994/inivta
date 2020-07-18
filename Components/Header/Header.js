@@ -18,6 +18,7 @@ return(
                 
 
             <div className="name" onClick={()=>Router.push('/')}>{props.sideBar&&'INIVTA'}</div>
+            <div className="small-size" onClick={()=>Router.push('/')}>{!props.sideBar&&'INIVTA'}</div>
             <div onClick={()=>props.hideSidebar(!props.sideBar)} className="menu-line">
             {/* {props.sideBar?<><span id='line1'></span ><span id='line2'></span><span id='line3'></span></>:<MdClose /> } */}
             <div id="hambmenu" className={menuStatus} ><span></span><span></span><span></span><span></span></div>
@@ -34,12 +35,18 @@ return(
             </div>
         </div>
 <style>{`
-
+.small-size{
+    color:${props.sideBar?'#000 ':'#fff' };
+}
+.headerWrapper{
+    background:${props.sideBar?'#fff ':'#000 ' };
+}
 #line1, #line2, #line3{
     border-top: 1.5px solid white;
     margin-top:5px;
     border-color:${props.sideBar?'#000 ':'#fff' };
 }
+
 .header{
     font-weight: 700;
     font-family: proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -71,6 +78,14 @@ return(
     background:${props.sideBar?'#000 ':'#fff' };
 } 
 
+@media only screen and (max-width:480px){
+	.small-size{
+		display: flex;
+	}
+	.name{
+		display: ${props.sideBar?'flex':'none !important'};
+	}
+}
 
 
     `}</style>
