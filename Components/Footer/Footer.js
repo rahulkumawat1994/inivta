@@ -10,7 +10,7 @@ return(
     <div className="footerWrapper">
         <div className="footer">
                <ul className="list row">
-                <li className={`home nav-item   col-xl-3 col-lg-3 col-sm-6 ${router.pathname==='/follow-us'&&'active'}`}   onClick={() =>{SetActive('follow-us');Router.push('/')}}><span style={{marginRight: '5%'}}>Follow</span><span>
+                <li className={`follow-us nav-item   col-xl-3 col-lg-3 col-sm-6 ${router.pathname==='/follow-us'&&'active'}`}   onClick={() =>{SetActive('follow-us');Router.push('/')}}><span style={{marginRight: '5%'}}>Follow</span><span>
                      us</span></li>
                 <li className={`contests nav-item  col-xl-3 col-lg-3 col-sm-6 ${router.pathname==='/FaceBook'&&'active'}`} onClick={() =>{SetActive('FaceBook'); Router.push('/FaceBook')}} style={{fontFamily:'MyriadPro-Bold'}}   >facebook</li>
                 <li className={`instagram nav-item col-xl-3 col-lg-3 col-sm-6 ${router.pathname==='/Instagram'&&'active'}`} onClick={() =>{SetActive('Instagram'); Router.push('/Instagram')}} style={{fontFamily: 'Billabong', textAlign: 'center'}}>Instagram</li>
