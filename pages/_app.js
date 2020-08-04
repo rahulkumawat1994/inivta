@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from '../Components/head'
 import App, { Container } from 'next/app';
-import Layout from '../Components/Layot/layout';
+import Layout from '../Components/Layout/layout';
 import NextHead from 'next/head';
 
 
@@ -20,7 +20,8 @@ export default class MyApp extends App {
     return (
 
       <Container>
-  <Layout hideSidebar={e=>this.setState({sideBar:e})} sideBar={this.state.sideBar}><Component {...pageProps} sideBar={this.state.sideBar}/></Layout></Container>
+  <Layout hideSidebar={e=>this.setState({sideBar:e})} sideBar={this.state.sideBar}>
+    <Component {...pageProps} sideBar={this.state.sideBar}/></Layout></Container>
   
   
   

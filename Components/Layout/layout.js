@@ -13,7 +13,7 @@ return(
     <Header settings={settings} hideSidebar={e=>hideSidebar(e)} sideBar={sideBar}/>
 
     <div className="container1">
-      <SideBar  sideBar={sideBar}/>
+      <SideBar  sideBar={sideBar} hideSidebar={e=>hideSidebar(e)}/>
       <div id="layoutSidenav_content">
       {children}
       <Footer settings={settings} sideBar={sideBar}/>

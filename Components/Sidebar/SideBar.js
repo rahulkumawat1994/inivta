@@ -19,21 +19,21 @@ const SideBar=(props)=>{
                 <div className="sb-sidenav-menu">
                     <div className="nav">
                     <a class={`nav-link  ${router.pathname==='/'&&'active'}`} href="javascript:void(null);"
-                    onClick={()=>Router.push("/")} >
+                    onClick={()=>{props.hideSidebar(!props.sideBar);Router.push("/")}} >
                                 <div class={`sb-nav-link-icon`}></div>
                                 Home
                             </a>
-                            <a class={`nav-link  ${router.pathname==='/product'&&'active'}`} href="javascript:void(null);" onClick={()=>Router.push("/product")}>
+                            <a class={`nav-link  ${router.pathname==='/product'&&'active'}`} href="javascript:void(null);" onClick={()=>{props.hideSidebar(!props.sideBar);Router.push("/product")}}>
                                 <div class="sb-nav-link-icon example"></div>
                                 Product
                             </a>
-                            <a class={`nav-link  ${router.pathname==='/about'&&'active'}`}href="javascript:void(null);" onClick={()=>Router.push("/about")}>
+                            <a class={`nav-link  ${router.pathname==='/about'&&'active'}`}href="javascript:void(null);" onClick={()=>{props.hideSidebar(!props.sideBar);Router.push("/about")}}>
                                 <div class="sb-nav-link-icon"></div>
                                 About
                             </a>
-                            <a class={`nav-link  ${router.pathname==='/contant'&&'active'}`}href="javascript:void(null);" onClick={()=>Router.push("/contant")}>
+                            <a class={`nav-link  ${router.pathname==='/contant'&&'active'}`}href="javascript:void(null);" onClick={()=>{props.hideSidebar(!props.sideBar);Router.push("/contant")}}>
                                 <div class="sb-nav-link-icon"></div>
-                                Contant
+                                Contact
                             </a>
                     </div>
                 </div>

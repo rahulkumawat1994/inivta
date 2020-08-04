@@ -1,6 +1,6 @@
 import React, { Component , useRef } from 'react';
 import Router from 'next/router'
-import Layout from '../Components/Layot/layout';
+import Layout from '../Components/Layout/layout';
 import "./styles.scss";
 
 
