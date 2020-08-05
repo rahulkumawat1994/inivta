@@ -150,10 +150,9 @@ return(
             display:none;
             margin-top:0px;
          }
-        .member-details{
-            margin-left:15px;
-            margin-right:15px;
-         
+         .member-details {
+            padding-left: 41px;
+            padding-right: 41px;
         }
         .extra{
             display:none;
@@ -185,11 +184,7 @@ return(
             display:none;
         }
        
-        .member-details{
-            margin-left:15px;
-            margin-right:15px;
-         
-        }
+      
     }
     @media only screen and (max-width:480px){
         .thumbs{
