@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+import MemberData from './MemberData';
 const About =(props)=>{
     
     const [memberID,setMemberId]=useState(1)
@@ -8,51 +8,36 @@ const About =(props)=>{
         setMemberId(e)
     }
 
-    const member=[{
-        id:1,
-        name:'JAMES CHARLETON',
-        details:'Hi my name is Cassian, I\'m a react developer, I\'ve developing Web and Native Apps for about 3 years now. I love working with creative induviduals that can bring strong critique as well as laugha at latest meme',
-        details2:'2016 to present PayPay inc.',
-        details3:'Sr. User experience designer. Foundations',
-        details4:'Establishing design system artifacts and processes to improve design across the rage of product design',
-        photo:'profile.png'},
-        {
-            id:2,
-            name:'Surya Singh',
-            details:'Hi my name is Surya Singh, I\'m a react developer, I\'ve developing Web and Native Apps for about 3 years now. I love working with creative induviduals that can bring strong critique as well as laugha at latest meme',
-            details2:'2016 to present PayPay inc.',
-            details3:'Sr. User experience designer. Foundations',
-            details4:'Establishing design system artifacts and processes to improve design across the rage of product design',
-            photo:'profile2.jfif'}]
+    
 return(
     <div className="main-container">
         <div className="row row-1">
  
     <div className="col-lg-6 col-sm-12 img-box">  
-    {member.map((e)=>(memberID===e.id&& <div className="img-container" style={{backgroundImage: `url(${e.photo})`}}> 
+    {MemberData.map((e)=>(memberID===e.id&& <div className="img-container" style={{backgroundImage: `url(${e.photo})`}}> 
     </div>))}
     </div>
     <div className="col-sm-12 member-select">
-        {member.map((e)=>(
+        {MemberData.map((e)=>(
         <div className="thumbs" style={{backgroundImage: `url(${e.photo})`,marginLeft:10,opacity:e.id===memberID?10:0.5 }} onClick={()=>handleMemberId(e.id)}></div>
         ))}</div>
     <div className="col-lg-4 col-sm-12 member-details">
-        {member.map((e)=>(memberID===e.id&& <div>
+        {MemberData.map((e)=>(memberID===e.id&& <div>
             <h6>{e.name}</h6>
             <h2>ABOUT ME</h2>
             <p>{e.details}
             </p>
             <h6 style={{fontWeight:600}}>EXPERIENCE:</h6>
-       <h6 >{e.details2}</h6>
-       <p>{e.details3}</p>
+       {/* <h6 >{e.details2}</h6> */}
+       {e.experience.map((indata)=><p style={{marginBottom: '0rem'}}>{indata}</p>)}
             <div>
-            <h6 style={{fontWeight:600}}>PROJECTS:</h6>
-       <p>{e.details4} </p>
+            <h6 style={{fontWeight:600,marginTop:10}}>PROJECTS:</h6>
+       <p>{e.project} </p>
             </div>
             </div>))}
     </div>
     <div className="row-1 sticky-select">
-       {member.map((e)=>(<div className="thumbs" 
+       {MemberData.map((e)=>(<div className="thumbs" 
        style={{backgroundImage: `url(${e.photo})`,opacity:e.id===memberID?10:0.5 }} onClick={()=>handleMemberId(e.id)}></div>))}
         </div>
     <div className="col-lg-2 col-sm-1 extra"> </div>
@@ -93,7 +78,7 @@ return(
         flex-direction: column;
         right: 121px;
         border-radius:50%;
-        margin-top: 15rem;
+     margin-top: 7rem;
         cursor:pointer;
         position: fixed;
         z-index:10;
