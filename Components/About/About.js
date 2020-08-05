@@ -26,16 +26,11 @@ const About =(props)=>{
             photo:'profile2.jfif'}]
 return(
     <div className="main-container">
-    <div className="row-1 sticky-select">
-       {member.map((e)=>(<div className="thumbs" 
-       style={{backgroundImage: `url(${e.photo})`,opacity:e.id===memberID?10:0.5 }} onClick={()=>handleMemberId(e.id)}></div>))}
-        </div>
         <div className="row row-1">
  
-    <div className="col-lg-6 col-sm-12 img-box ">  
-    <div className="img-container">
-{member.map((e)=>(memberID===e.id&&<img src={e.photo} className="profile-img"/>))}  
-    </div>
+    <div className="col-lg-6 col-sm-12 img-box">  
+    {member.map((e)=>(memberID===e.id&& <div className="img-container" style={{backgroundImage: `url(${e.photo})`}}> 
+    </div>))}
     </div>
     <div className="col-sm-12 member-select">
         {member.map((e)=>(
@@ -47,15 +42,19 @@ return(
             <h2>ABOUT ME</h2>
             <p>{e.details}
             </p>
-            <h6>EXPERIENCE</h6>
-       <h6>{e.details2}</h6>
+            <h6 style={{fontWeight:600}}>EXPERIENCE:</h6>
+       <h6 >{e.details2}</h6>
        <p>{e.details3}</p>
             <div>
-            <h6>PROJECTS:</h6>
+            <h6 style={{fontWeight:600}}>PROJECTS:</h6>
        <p>{e.details4} </p>
             </div>
             </div>))}
     </div>
+    <div className="row-1 sticky-select">
+       {member.map((e)=>(<div className="thumbs" 
+       style={{backgroundImage: `url(${e.photo})`,opacity:e.id===memberID?10:0.5 }} onClick={()=>handleMemberId(e.id)}></div>))}
+        </div>
     <div className="col-lg-2 col-sm-1 extra"> </div>
 <style>{`
  .main-container{
@@ -70,9 +69,8 @@ return(
     }
     .img-box{
         display: flex;
+        max-width:28rem;
         justify-content: flex-end;
-        position: relative;
-        margin-left: 44px;
     }
     .profile-img{
             width: 26rem;
@@ -82,11 +80,18 @@ return(
     }
     .img-container{
         display: flex;
+        min-width: 28rem;
+        max-height: 30rem;
+        min-height: 34rem;
+        max-width: 28rem;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
         }
     .sticky-select{
         display: flex;
         flex-direction: column;
-        margin-left:15px;
+        right: 121px;
         border-radius:50%;
         margin-top: 15rem;
         cursor:pointer;
@@ -122,10 +127,17 @@ return(
     }
 
     @media only screen and (max-width:992px){
+        .member-select{
+            display:flex;
+            justify-content: center;
+            margin-top:15px;
+
+        }
         .profile-img{
             width: 20rem;
     }
         .img-box{
+            max-width:100%;
             justify-content: center;
             margin-left: 0px;
         }
@@ -134,8 +146,25 @@ return(
             margin-top: 11rem;
             position:relative;
         }
+        .sticky-select{
+            display:none;
+            margin-top:0px;
+         }
+        .member-details{
+            margin-left:15px;
+            margin-right:15px;
+         
+        }
+        .extra{
+            display:none;
+        }
     }
     @media only screen and (max-width:750px){
+        .thumbs{
+            width:100px;
+            height:100px;
+        }
+        
         .member-select{
             display:flex;
             align-items: center;
@@ -160,6 +189,12 @@ return(
             margin-left:15px;
             margin-right:15px;
          
+        }
+    }
+    @media only screen and (max-width:480px){
+        .thumbs{
+            width:60px;
+            height:60px;
         }
     }
 
