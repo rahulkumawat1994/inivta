@@ -70,7 +70,7 @@ return(
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size:20px;
+    font-size: 30px;
     color:${props.sideBar?'#000 ':'#fff' };
     cursor:pointer
 }
