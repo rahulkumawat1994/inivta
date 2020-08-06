@@ -55,6 +55,7 @@ return(
     .img-box{
         display: flex;
         max-width:28rem;
+        margin-left: 62px;
         justify-content: flex-end;
     }
     .profile-img{
@@ -62,6 +63,9 @@ return(
     }
     .main-container{
        display:flex;
+    }
+    p{
+        text-align: justify;
     }
     .img-container{
         display: flex;
@@ -76,9 +80,8 @@ return(
     .sticky-select{
         display: flex;
         flex-direction: column;
-        right: 121px;
+        right: 95px;
         border-radius:50%;
-     margin-top: 7rem;
         cursor:pointer;
         position: fixed;
         z-index:10;
@@ -139,6 +142,7 @@ return(
             padding-left: 41px;
             padding-right: 41px;
         }
+    
         .extra{
             display:none;
         }
