@@ -92,8 +92,7 @@ return(
         background-position: center center;
         width: 60px;
         height: 60px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 12px;
         -webkit-border-radius: 60px;
         -webkit-background-clip: padding-box;
         -moz-border-radius: 60px;
